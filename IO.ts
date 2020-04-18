@@ -7,3 +7,6 @@ const getItem = (key: string): IO<Option<string>> => () =>
 
 const setItem = (key: string, value: string): IO<void> => () =>
   localStorage.setItem(key, value);
+
+// get current time
+const now: IO<number> = () => new Date().getTime();
