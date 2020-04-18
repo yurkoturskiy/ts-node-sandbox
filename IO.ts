@@ -10,3 +10,6 @@ const setItem = (key: string, value: string): IO<void> => () =>
 
 // get current time
 const now: IO<number> = () => new Date().getTime();
+
+// write to console
+const log = (s: unknown): IO<void> => () => console.log(s);
